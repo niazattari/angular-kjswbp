@@ -20,7 +20,7 @@ export class TodoItemComponent implements OnInit {
     this.delete.emit({index:this.index});
   }
   editTodo() {
-    this.edit.emit({index:this.edit}); 
+    this.edit.emit({index:this.index}); 
   }
 
 }

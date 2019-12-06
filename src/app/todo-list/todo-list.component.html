@@ -6,7 +6,8 @@
 <div class="list-group">
 <app-todo-item *ngFor="let item of todos; let i = index" [todo]="item" [index]="i"
 (delete)="deleteTodo($event)"
-(edit)="editTodo($evnet)"
+(edit)="editTodo($event)"
+
 ></app-todo-item>
 </div>
 

@@ -1,2 +1,9 @@
 /* Add application styles & imports to this file! */
 /* @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'); */
+.actions {
+  float:right;
+}
+.actions i {
+  padding-right: 5px;
+  cursor: pointer;
+}

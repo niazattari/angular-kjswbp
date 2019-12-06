@@ -19,11 +19,18 @@ export class TodoListComponent implements OnInit {
   }
   saveTodo() {
     let txtTodoEl = this .txtTodoEl.nativeElement;
-    if(txtTodoEl.value.trim()=="")
-    return false;
-    // this.todos[this.selectedIndex]= txtTodoEl.value;
-    this.todos.push(txtTodoEl.value);
-    txtTodoEl.value="";
+    if(txtTodoEl.value.trim()==""){
+       return false;
+    }
+    else {
+       this.todos.push(txtTodoEl.value);
+      txtTodoEl.value="";
+    }
+   
   }
-
+  deleteTodo({index}) {
+    console.log(index);
+    this.todos.splice(index, 1);
+  }
+ 
 }

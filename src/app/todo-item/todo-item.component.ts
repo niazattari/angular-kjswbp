@@ -8,9 +8,19 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 export class TodoItemComponent implements OnInit {
   @Input() todo;
   @Input() index;
+
+  @Output() delete:EventEmitter<any> = new EventEmitter<any>();
+  @Output() edit:EventEmitter<any> = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+  deleteTodo() {
+    this.delete.emit({index:this.index});
+  }
+  editTodo() {
+    this.edit.emit({index:this.edit}); 
   }
 
 }

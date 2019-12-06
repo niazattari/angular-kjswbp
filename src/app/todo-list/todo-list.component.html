@@ -1,7 +1,12 @@
-<div class="alert alert-danger" *ngIf="return false"  >Please enter some tasks to petform </div>
+<h2 class="text-center">Todo List</h2>
+<div class="alert alert-danger" *ngIf="todos.length > 0 ">{{todos.length}} tasks are pending now</div>
+<div class="alert alert-success" *ngIf="todos.length == 0">Congradulations! Your all tasks are completed now </div>
+<div class="alert alert-danger" *ngIf="return false"  >Please enter some tasks to petformm </div>
 
 <div class="list-group">
 <app-todo-item *ngFor="let item of todos; let i = index" [todo]="item" [index]="i"
+(delete)="deleteTodo($event)"
+(edit)="editTodo($evnet)"
 ></app-todo-item>
 </div>
 

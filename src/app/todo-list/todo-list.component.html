@@ -1,0 +1,15 @@
+<div class="alert alert-danger" *ngIf="return false"  >Please enter some tasks to petform </div>
+
+<div class="list-group">
+<app-todo-item *ngFor="let item of todos; let i = index" [todo]="item" [index]="i"
+></app-todo-item>
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" #txtTodo>
+  <span class="input-group-addon" (click)="saveTodo()">
+    <i class="glyphicon glyphicon-plus"></i>
+  </span>
+</div>
+
+
